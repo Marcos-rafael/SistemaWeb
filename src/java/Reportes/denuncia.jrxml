@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c92370cc-168d-4e5f-bd36-5f16b62b88c7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     denuncia_cabecera.`iddenuncia` AS denuncia_cabecera_iddenuncia,
+     denuncia_cabecera.`cedula` AS denuncia_cabecera_cedula,
+     denuncia_cabecera.`nombre` AS denuncia_cabecera_nombre,
+     denuncia_cabecera.`apellido` AS denuncia_cabecera_apellido,
+     denuncia_cabecera.`nacionalidad` AS denuncia_cabecera_nacionalidad,
+     denuncia_cabecera.`estado_civil` AS denuncia_cabecera_estado_civil,
+     denuncia_cabecera.`direccion` AS denuncia_cabecera_direccion,
+     denuncia_cabecera.`ciudad` AS denuncia_cabecera_ciudad,
+     denuncia_cabecera.`barrio` AS denuncia_cabecera_barrio,
+     denuncia_cabecera.`telefono` AS denuncia_cabecera_telefono,
+     denuncia_cabecera.`fecha_denuncia` AS denuncia_cabecera_fecha_denuncia
+FROM
+     `denuncia_cabecera` denuncia_cabecera]]>
+	</queryString>
+	<field name="denuncia_cabecera_iddenuncia" class="java.lang.Integer"/>
+	<field name="denuncia_cabecera_cedula" class="java.lang.String"/>
+	<field name="denuncia_cabecera_nombre" class="java.lang.String"/>
+	<field name="denuncia_cabecera_apellido" class="java.lang.String"/>
+	<field name="denuncia_cabecera_nacionalidad" class="java.lang.String"/>
+	<field name="denuncia_cabecera_estado_civil" class="java.lang.String"/>
+	<field name="denuncia_cabecera_direccion" class="java.lang.String"/>
+	<field name="denuncia_cabecera_ciudad" class="java.lang.String"/>
+	<field name="denuncia_cabecera_barrio" class="java.lang.String"/>
+	<field name="denuncia_cabecera_telefono" class="java.lang.String"/>
+	<field name="denuncia_cabecera_fecha_denuncia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="166" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="1" y="90" width="554" height="18" uuid="f605a207-076a-4d90-842d-39e9b4b1c6c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[POLICÍA NACIONAL]]></text>
+			</staticText>
+			<image>
+				<reportElement x="198" y="-14" width="150" height="141" uuid="5c43c09a-6671-470f-b96f-7774d2472fed"/>
+				<imageExpression><![CDATA["C:\\Users\\Marcos\\Documents\\NetBeansProjects\\SistemaDenunciaWeb\\web\\img\\policia.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="1" y="0" width="97" height="74" uuid="ac2b7feb-cd8f-46f7-9e75-2361e136943b"/>
+				<imageExpression><![CDATA["C:\\Users\\Marcos\\Documents\\NetBeansProjects\\SistemaDenunciaWeb\\web\\img\\logoParaguay.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="57" y="25" width="141" height="22" uuid="768b761a-e53e-486b-86f2-ec63de0715f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Policía Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="198" y="108" width="102" height="19" uuid="d4abd284-1ea6-4bea-8506-6d603ba05014"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[COMISARÍA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="1" y="127" width="554" height="22" uuid="6aee1b9f-f43e-46d0-8411-97df331a3a27"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[DE LA DIRECCIÓN DE ASUNCIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="4fa5a925-c154-4480-a008-5aa84db06376"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="3280f681-5b46-4d9d-b5b8-4c222b362710"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="bc9689c3-ce8a-4988-890d-96e6b75b2754"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="d3b3b6f5-87e5-4b9c-81fb-c6503abfd266"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="9e4ea68e-6395-4dfd-be9d-59e28fbab4e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="4a0b3501-0b33-4914-b80c-d82f16bf48f1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

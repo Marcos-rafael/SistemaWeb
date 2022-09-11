@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6cac9127-4d80-41a8-83fc-726ab2eae0ab">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     denuncia_cabecera.`iddenuncia` AS denuncia_cabecera_iddenuncia,
+     denuncia_cabecera.`cedula` AS denuncia_cabecera_cedula,
+     denuncia_cabecera.`nombre` AS denuncia_cabecera_nombre,
+     denuncia_cabecera.`apellido` AS denuncia_cabecera_apellido,
+     denuncia_cabecera.`nacionalidad` AS denuncia_cabecera_nacionalidad,
+     denuncia_cabecera.`estado_civil` AS denuncia_cabecera_estado_civil,
+     denuncia_cabecera.`direccion` AS denuncia_cabecera_direccion,
+     denuncia_cabecera.`ciudad` AS denuncia_cabecera_ciudad,
+     denuncia_cabecera.`barrio` AS denuncia_cabecera_barrio,
+     denuncia_cabecera.`telefono` AS denuncia_cabecera_telefono,
+     denuncia_cabecera.`fecha_denuncia` AS denuncia_cabecera_fecha_denuncia,
+     denuncia_detalle.`iddenuncia_detalle` AS denuncia_detalle_iddenuncia_detalle,
+     denuncia_detalle.`iddenuncia_cabecera` AS denuncia_detalle_iddenuncia_cabecera,
+     denuncia_detalle.`tipo_objeto` AS denuncia_detalle_tipo_objeto,
+     denuncia_detalle.`serie` AS denuncia_detalle_serie,
+     denuncia_detalle.`descripcion` AS denuncia_detalle_descripcion,
+     comisaria.`cod_comisaria` AS comisaria_cod_comisaria,
+     comisaria.`nombre_comisaria` AS comisaria_nombre_comisaria,
+     comisaria.`telefono` AS comisaria_telefono,
+     comisaria.`cod_direccion` AS comisaria_cod_direccion,
+     comisaria.`cod_departamento` AS comisaria_cod_departamento,
+     comisaria.`cod_ciudad` AS comisaria_cod_ciudad,
+     comisaria.`cod_barrio` AS comisaria_cod_barrio,
+     comisaria.`estado` AS comisaria_estado
+FROM
+     `denuncia_cabecera` denuncia_cabecera,
+     `denuncia_detalle` denuncia_detalle,
+     `comisaria` comisaria]]>
+	</queryString>
+	<field name="denuncia_cabecera_iddenuncia" class="java.lang.Integer"/>
+	<field name="denuncia_cabecera_cedula" class="java.lang.String"/>
+	<field name="denuncia_cabecera_nombre" class="java.lang.String"/>
+	<field name="denuncia_cabecera_apellido" class="java.lang.String"/>
+	<field name="denuncia_cabecera_nacionalidad" class="java.lang.String"/>
+	<field name="denuncia_cabecera_estado_civil" class="java.lang.String"/>
+	<field name="denuncia_cabecera_direccion" class="java.lang.String"/>
+	<field name="denuncia_cabecera_ciudad" class="java.lang.String"/>
+	<field name="denuncia_cabecera_barrio" class="java.lang.String"/>
+	<field name="denuncia_cabecera_telefono" class="java.lang.String"/>
+	<field name="denuncia_cabecera_fecha_denuncia" class="java.lang.String"/>
+	<field name="denuncia_detalle_iddenuncia_detalle" class="java.lang.Integer"/>
+	<field name="denuncia_detalle_iddenuncia_cabecera" class="java.lang.Integer"/>
+	<field name="denuncia_detalle_tipo_objeto" class="java.lang.String"/>
+	<field name="denuncia_detalle_serie" class="java.lang.String"/>
+	<field name="denuncia_detalle_descripcion" class="java.lang.String"/>
+	<field name="comisaria_cod_comisaria" class="java.lang.Integer"/>
+	<field name="comisaria_nombre_comisaria" class="java.lang.String"/>
+	<field name="comisaria_telefono" class="java.lang.String"/>
+	<field name="comisaria_cod_direccion" class="java.lang.String"/>
+	<field name="comisaria_cod_departamento" class="java.lang.String"/>
+	<field name="comisaria_cod_ciudad" class="java.lang.String"/>
+	<field name="comisaria_cod_barrio" class="java.lang.String"/>
+	<field name="comisaria_estado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
